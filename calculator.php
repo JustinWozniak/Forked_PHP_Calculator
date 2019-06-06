@@ -8,6 +8,26 @@ include("calculator_controller.php");
 <html>
 
 <head>
+
+
+<script>
+//TRYING TO GET THE PAGE TO REFRESH HERE---------------------------------------
+
+
+
+//Not sure what this did
+// //Construct the current URL.
+// var currentURL = window.location.pathname + window.location.search + window.location.hash;
+// //Redirect to the current URL.
+// window.location.href = currentURL;
+
+
+
+//Callback dosnt work because it re-submits the form each time...
+// setTimeout(function(){ location.reload(false); }, 2000);
+</script>
+
+
     <style>
         h2 {
             font-family: cursive;
