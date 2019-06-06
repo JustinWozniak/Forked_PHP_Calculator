@@ -3,11 +3,7 @@
 function CalcDB_Connect() {
     global $conn;
     
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "calc_db";
-
+    include ('mysql_credentials.php');
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
@@ -25,7 +21,7 @@ function HistoryOfCalculations_AddLine($line) {
     // if ($conn->query($sql) === FALSE) {
     //     echo "Error: " . $sql . "<br>" . $conn->error;
     // }
-
+///ALL THIS CODE WAS ADDED TO HELP WITH MYSQL /PHP INJECTIONS
     $stmt = $conn->prepare("INSERT INTO history_of_calculations (calculation_text) VALUES (?)");
 
     $stmt->bind_param("s", $line);
@@ -81,5 +77,3 @@ echo "</pre>";
 
 CalcDB_Close();
 */
-
-?>
